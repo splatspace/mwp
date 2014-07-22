@@ -19,9 +19,9 @@ def get_events(key, urlname):
     events = []
     for d in data:
         e = {
-            'name': d['name'],
-            'url': d['event_url'],
-            'description': d['description'],
+            'name': d.get('name'),
+            'url': d.get('event_url'),
+            'description': d.get('description', "No description."),
             }
         timestamp = d['time']
         event_date = datetime.datetime.fromtimestamp(timestamp/1000)
