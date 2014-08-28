@@ -14,7 +14,7 @@ Here's this week's schedule:
 <ul>
 {% for event in events %}
 <li>
-    <p><strong>{{ event.date }}<strong> {{ event.name }}:</p>
+    <p><strong>{{ event.date }}</strong> {{ event.name }}:</p>
     <p>{{ event.description }}</p>
 </li>
 {% endfor %}
